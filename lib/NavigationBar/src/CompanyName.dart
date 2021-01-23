@@ -10,7 +10,7 @@ class CompanyName extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'qMS',
+              'App name',
               style: TextStyle(
                 fontWeight: FontWeight.w300,
                 color: Colors.white70,
