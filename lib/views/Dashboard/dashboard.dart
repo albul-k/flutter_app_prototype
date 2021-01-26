@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:flutter_app_prototype/Dashboard/src/ProjectProgressCard.dart';
-import 'package:flutter_app_prototype/Dashboard/src/SharedFilesItem.dart';
-import 'package:flutter_app_prototype/Dashboard/src/SubHeader.dart';
-import 'package:flutter_app_prototype/Dashboard/src/Tabs.dart';
-import 'package:flutter_app_prototype/Dashboard/src/TopContainer.dart';
+// import 'package:percent_indicator/circular_percent_indicator.dart';
+import 'package:flutter_app_prototype/views/Dashboard/src/ProjectProgressCard.dart';
+import 'package:flutter_app_prototype/views/Dashboard/src/SharedFilesItem.dart';
+import 'package:flutter_app_prototype/views/Dashboard/src/SubHeader.dart';
+import 'package:flutter_app_prototype/views/Dashboard/src/Tabs.dart';
+import 'package:flutter_app_prototype/views/Dashboard/src/TopContainer.dart';
 
-class DashBoard extends StatelessWidget {
+class Dashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(

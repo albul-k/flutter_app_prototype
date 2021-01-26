@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:flutter_app_prototype/NavigationBar/src/CompanyName.dart';
-import 'package:flutter_app_prototype/NavigationBar/src/NavBar.dart';
-import 'package:flutter_app_prototype/NavigationBar/src/NavBarItem.dart';
+// import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:flutter_app_prototype/views/NavigationBar/src/CompanyName.dart';
+import 'package:flutter_app_prototype/views/NavigationBar/src/NavBar.dart';
+import 'package:flutter_app_prototype/views/NavigationBar/src/NavBarBottom.dart';
+// import 'package:flutter_app_prototype/NavigationBar/src/NavBarItem.dart';
 
 class NavigationBar extends StatefulWidget {
   @override
@@ -27,10 +28,7 @@ class _NavigationBarState extends State<NavigationBar> {
             ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: NavBarItem(
-                icon: Feather.log_out,
-                active: false,
-              ),
+              child: NavBarBottom(),
             )
           ],
         ),

@@ -35,7 +35,7 @@ class _ProjectProgressCardState extends State<ProjectProgressCard> {
         });
       },
       child: AnimatedContainer(
-        duration: Duration(milliseconds: 275),
+        duration: Duration(milliseconds: 100),
         height: hovered ? 160.0 : 155.0,
         width: hovered ? 200.0 : 195.0,
         decoration: BoxDecoration(

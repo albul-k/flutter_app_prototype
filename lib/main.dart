@@ -1,25 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app_prototype/Dashboard/Dashboard.dart';
-import 'package:flutter_app_prototype/NavigationBar/NavigationBar.dart';
+import 'package:flutter_app_prototype/views/Home/home.dart';
+import 'package:flutter_app_prototype/views/Login/login.dart';
 
 void main() {
-  runApp(MaterialApp(home: MyApp()));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: Stack(
-          children: [
-            NavigationBar(),
-            DashBoard(),
-          ],
-        ),
-      ),
+    Map<String, WidgetBuilder> routes = {
+      '/': (BuildContext context) => Login(),
+      '/home': (BuildContext context) => Home(),
+    };
+    return MaterialApp(
+      initialRoute: '/',
+      routes: routes,
+      theme: ThemeData(fontFamily: 'HelveticaNeue'),
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Demo',
     );
   }
 }
