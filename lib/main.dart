@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: routes,
-      theme: ThemeData(fontFamily: 'HelveticaNeue'),
+      // theme: ThemeData(fontFamily: 'HelveticaNeue'),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
     );

@@ -23,7 +23,7 @@ class _LoginState extends State<Login> {
       keyboardType: TextInputType.emailAddress,
       autofocus: false,
       decoration: InputDecoration(
-        hintText: 'Email',
+        hintText: 'Логин',
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
       ),
     );
@@ -33,7 +33,7 @@ class _LoginState extends State<Login> {
       initialValue: '',
       obscureText: true,
       decoration: InputDecoration(
-        hintText: 'Password',
+        hintText: 'Пароль',
         contentPadding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 10.0),
       ),
     );
@@ -49,7 +49,7 @@ class _LoginState extends State<Login> {
         },
         padding: EdgeInsets.all(12),
         color: ColorConstants.blue,
-        child: Text('Log In',
+        child: Text('Войти',
             style: TextStyle(
                 fontSize: 16,
                 color: Colors.white,
@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
 
     final forgotLabel = FlatButton(
       child: Text(
-        'Forgot password?',
+        'Забыли пароль?',
         style: TextStyle(color: Colors.black54),
       ),
       onPressed: () {},
@@ -76,11 +76,6 @@ class _LoginState extends State<Login> {
                 width: MediaQuery.of(context).size.width,
                 color: Colors.white,
               ),
-              Container(
-                height: MediaQuery.of(context).size.height / 2,
-                width: MediaQuery.of(context).size.width,
-                color: ColorConstants.blue,
-              ),
             ],
           ),
           Center(
@@ -88,14 +83,14 @@ class _LoginState extends State<Login> {
               elevation: 2.0,
               child: Container(
                 padding: EdgeInsets.all(42),
-                width: MediaQuery.of(context).size.width / 2.5,
+                width: MediaQuery.of(context).size.width / 2,
                 height: MediaQuery.of(context).size.height / 1.5,
                 child: Column(
                   children: <Widget>[
                     SizedBox(height: 62.0),
                     Center(
                         child: Text(
-                      "Admin Material",
+                      "Регистрация",
                       style: TextStyle(
                         fontSize: 28,
                         fontWeight: FontWeight.bold,
@@ -119,7 +114,7 @@ class _LoginState extends State<Login> {
                                 });
                               },
                             ),
-                            Text("Remember Me")
+                            Text("Запомнить")
                           ],
                         ),
                         forgotLabel,

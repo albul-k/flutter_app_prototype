@@ -6,7 +6,7 @@ import 'package:flutter_app_prototype/views/Dashboard/src/ProjectProgressCard.da
 import 'package:flutter_app_prototype/views/Dashboard/src/SharedFilesItem.dart';
 import 'package:flutter_app_prototype/views/Dashboard/src/SubHeader.dart';
 import 'package:flutter_app_prototype/views/Dashboard/src/Tabs.dart';
-import 'package:flutter_app_prototype/views/Dashboard/src/TopContainer.dart';
+// import 'package:flutter_app_prototype/views/Dashboard/src/TopContainer.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -20,7 +20,7 @@ class Dashboard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TopContainer(),
+            // TopContainer(),
             Container(
               margin: EdgeInsets.only(left: 30.0, top: 25.0, bottom: 10.0),
               child: Text(
