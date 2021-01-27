@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_prototype/views/NavigationBar/NavigationBar.dart';
 import 'package:flutter_app_prototype/views/Dashboard/dashboard.dart';
 import 'package:flutter_app_prototype/utils/color_constants.dart';
+import 'package:flutter_app_prototype/data/navbar_left.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -29,6 +30,7 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
     super.dispose();
   }
 
+  // top toolbar
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,14 +60,14 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
             icon: Icon(Icons.search),
             onPressed: () {},
           )),
-          SizedBox(width: 32),
+          // SizedBox(width: 32),
           Container(
               child: IconButton(
             padding: EdgeInsets.all(0),
             icon: Icon(Icons.notifications),
             onPressed: () {},
           )),
-          SizedBox(width: 32),
+          // SizedBox(width: 32),
           Container(
             child: IconButton(
               padding: EdgeInsets.all(0),
@@ -75,7 +77,7 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
               },
             ),
           ),
-          SizedBox(width: 32),
+          // SizedBox(width: 32),
         ],
         backgroundColor: ColorConstants.blue,
         // automaticallyImplyLeading: false,
@@ -117,8 +119,8 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
 
   Widget listDrawerItems(bool drawerStatus) {
     return ListView(
-      children: <Widget>[
-        FlatButton(
+      children: List<Widget>.generate(3, (i) {
+        return FlatButton(
           color: tabController.index == 0 ? Colors.grey[100] : Colors.white,
           //color: Colors.grey[100],
           onPressed: () {
@@ -131,12 +133,12 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
             child: Container(
               padding: EdgeInsets.only(top: 22, bottom: 22, right: 22),
               child: Row(children: [
-                Icon(Icons.dashboard),
+                Icon(icons[i]),
                 SizedBox(
                   width: 8,
                 ),
                 Text(
-                  "Dashboard",
+                  navbar_left_name[i],
                   style: TextStyle(
                     fontSize: 18,
                     fontFamily: 'HelveticaNeue',
@@ -145,61 +147,9 @@ class HomeState extends State<Home> with SingleTickerProviderStateMixin {
               ]),
             ),
           ),
-        ),
-        FlatButton(
-          color: tabController.index == 1 ? Colors.grey[100] : Colors.white,
-          onPressed: () {
-            print(tabController.index);
-            tabController.animateTo(1);
-            drawerStatus ? Navigator.pop(context) : print("");
-          },
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: Container(
-              padding: EdgeInsets.only(top: 22, bottom: 22, right: 22),
-              child: Row(children: [
-                Icon(Icons.exit_to_app),
-                SizedBox(
-                  width: 8,
-                ),
-                Text(
-                  "Forms",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontFamily: 'HelveticaNeue',
-                  ),
-                ),
-              ]),
-            ),
-          ),
-        ),
-        FlatButton(
-          color: tabController.index == 2 ? Colors.grey[100] : Colors.white,
-          onPressed: () {
-            tabController.animateTo(2);
-            drawerStatus ? Navigator.pop(context) : print("");
-          },
-          child: Align(
-            alignment: Alignment.centerLeft,
-            child: Container(
-              padding: EdgeInsets.only(top: 22, bottom: 22, right: 22),
-              child: Row(children: [
-                Icon(Icons.category),
-                SizedBox(
-                  width: 8,
-                ),
-                Text(
-                  "Hero",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontFamily: 'HelveticaNeue',
-                  ),
-                ),
-              ]),
-            ),
-          ),
-        ),
-      ],
+        );
+      }),
+      // ],
     );
   }
 }
